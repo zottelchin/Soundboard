@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <title>Pokeliga Sound Board</title>
+
+    <style>
+        #clockdiv {
+            font-family: sans-serif;
+            color: #fff;
+            display: inline-block;
+            font-weight: 100;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        #clockdiv>div {
+            padding: 10px;
+            border-radius: 3px;
+            display: inline-block;
+        }
+
+        #clockdiv div>span {
+            padding: 15px;
+            border-radius: 3px;
+            background: rgb(255, 193, 7);
+            color: gray;
+            display: inline-block;
+        }
+
+        #clockdiv div>h2 {
+            color: gold;
+            font-size: 30pt;
+        }
+
+        .smalltext {
+            padding-top: 5px;
+            font-size: 16px;
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9 bg-light text-dark">
+                <h2>Pokeliga Timer</h2>
+                <div class="row">
+                    <div class="col-sm-9">
+                        <div class="input-group mb-3">
+                            <div class="input-group-append">
+                                <span class="input-group-text">Spielzeit</span>
+                            </div>
+                            <input id="countdowntime" type="number" class="form-control" value="30" min="0" max="60" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <span class="input-group-text">Minuten</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-append">
+                                <span class="input-group-text">Bald Ende Jingle</span>
+                            </div>
+                            <input id="jingle2time" type="number" class="form-control" value="15" min="0" max="60" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <span class="input-group-text">Minuten vor Ende</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="row mb-3">
+                            <button id="startCD" class="mr-1 btn btn-success mx-auto" type="button">Start Game</button>
+                        </div>
+                        <div class="row">
+                            <button id="pauseCD" class="mr-1 mb-3 btn btn-danger mx-auto d-none" type="button">Pause Game</button>
+                            <button id="resumeCD" class="mr-1 mb-3 btn btn-danger mx-auto d-none" type="button">Resume Game</button>
+                        </div>
+
+                        <div class="row">
+                            <button id="StopCD" class="mr-1 btn btn-info mx-auto" type="button">Reset Game</button>
+                        </div>
+
+                    </div>
+
+                    <div id="clockdiv">
+                        <div>
+                            <span class="remaining">00:00</span>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-sm-3 bg-secondary text-white">
+                <h2>Test Sounds</h2>
+                <button id="testStart" type="button" class="btn btn-warning mb-3 mt-1">Start Jingle</button>
+                <br>
+                <button id="test5Min" type="button" class="btn btn-warning mb-3">5 Minutes left Jingle</button>
+                <br>
+                <button id="testStop" type="button" class="btn btn-warning mb-3">Game End Jingle</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
